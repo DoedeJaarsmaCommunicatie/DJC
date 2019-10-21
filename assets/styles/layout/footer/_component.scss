@@ -1,0 +1,15 @@
+@use "abstracts" as *;
+
+.footer-phone {
+  font-size: 2rem;
+  color: scale-color($black, $alpha: -40%);
+  transition: all 225ms ease;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.phone-letter {
+  color: $black;
+}

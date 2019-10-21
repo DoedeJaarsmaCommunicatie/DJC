@@ -1,0 +1,14 @@
+<header class="header shadow py-4 px-4 lg:px-0">
+    <div class="container mx-auto lg:flex">
+        <section class="header-start">
+            {% if theme.theme_mod('custom_logo') %}
+                {{ include('components/header/logo.html.twig') }}
+            {% else %}
+                {{ include('components/header/logo-text.html.twig') }}
+            {% endif %}
+        </section>
+        <div class="header-end lg:ml-auto lg:my-auto">
+            {{ include('components/header/navbar.html.twig') }}
+        </div>
+    </div>
+</header>

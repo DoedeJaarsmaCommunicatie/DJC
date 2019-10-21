@@ -1,0 +1,10 @@
+node_modules/
+.idea/
+assets/
+.gitignore
+composer.json
+composer.lock
+package.json
+uwire.config.json
+webpack.mix.js
+yarn.lock
