@@ -1,0 +1,13 @@
+{% macro phone_button(class, with_icon = false) %}
+    {% set _number = fn('get_theme_mod', 'phone', '020-7852695') %}
+    <a href="tel:{{ _number }}" class="{{ class }} phonenumber">
+        {% if with_icon %}
+            <i class="fas fa-phone fa-flip-horizontal"></i>
+        {% else %}
+            <span class="phone-letter">T:</span>
+        {% endif %}
+        <span class="number">
+            {{ _number }}
+        </span>
+    </a>
+{% endmacro phone_button %}

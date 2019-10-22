@@ -1,0 +1,13 @@
+{% from 'components/buttons/menu.html.twig' import menu_item %}
+
+{% for item in primaryMenu.items %}
+    <div class="menu-wrapper" data-title="{{ item.title|sanitize }}">
+        {{ menu_item(item, 'menu-item navmenu-item') }}
+
+        {% if item.children %}
+            <section class="mega-submenu">
+                {{ include('partials/header/submenu.html.twig', { item: item }) }}
+            </section>
+        {% endif %}
+    </div>
+{% endfor %}

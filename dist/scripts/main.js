@@ -127,9 +127,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   init: function init() {// Javascript that fires on all pages.
   },
-  finalize: function finalize() {// Javascript that fires on all pages. after page specific JS is fires.
+  finalize: function finalize() {
+    // Javascript that fires on all pages. after page specific JS is fires.
+    menuToggler();
   }
 });
+
+var menuToggler = function menuToggler() {
+  var hamburger = document.querySelector('.js-toggle-menu');
+  var menu = document.querySelector('.navbar');
+  hamburger.addEventListener('click', function () {
+    menu.classList.remove('hidden');
+  });
+  document.body.addEventListener('click', function (ev) {
+    if (ev.target === menu || menu.contains(ev.target) || ev.target === hamburger || hamburger.contains(ev.target)) {
+      return;
+    }
+
+    menu.classList.add('hidden');
+  });
+};
 
 /***/ }),
 

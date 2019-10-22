@@ -1,0 +1,12 @@
+{% extends 'layouts/app.twig' %}
+
+{% block content %}
+    <header class="project-hero" data-background="{{ post.thumbnail.src('large') }}" style="background-image: url({{ post.thumbnail.src }})">
+        <div class="container mx-auto">
+            <h1 class="post-title">{{ post.title }}</h1>
+        </div>
+    </header>
+    <main class="post-content content">
+        {{ post.content }}
+    </main>
+{% endblock %}

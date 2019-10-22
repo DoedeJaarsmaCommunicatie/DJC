@@ -1,14 +1,20 @@
 <header class="header shadow py-4 px-4 lg:px-0">
-    <div class="container mx-auto lg:flex">
+    <div class="container mx-auto flex">
         <section class="header-start">
             {% if theme.theme_mod('custom_logo') %}
-                {{ include('components/header/logo.html.twig') }}
+                {{ include('partials/header/logo.html.twig') }}
             {% else %}
-                {{ include('components/header/logo-text.html.twig') }}
+                {{ include('partials/header/logo-text.html.twig') }}
             {% endif %}
         </section>
-        <div class="header-end lg:ml-auto lg:my-auto">
-            {{ include('components/header/navbar.html.twig') }}
+        <div class="header-end ml-auto my-auto flex">
+            <div class="navbar my-auto hidden lg:flex">
+                {{ include('partials/header/navbar.html.twig') }}
+            </div>
+            <button class="hamburger js-toggle-menu lg:hidden">
+                <i class="fas fa-bars"></i>
+            </button>
+            {{ include('partials/header/phone.html.twig') }}
         </div>
     </div>
 </header>

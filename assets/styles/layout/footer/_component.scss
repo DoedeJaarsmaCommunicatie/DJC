@@ -1,7 +1,6 @@
 @use "abstracts" as *;
 
 .footer-phone {
-  font-size: 2rem;
   color: scale-color($black, $alpha: -40%);
   transition: all 225ms ease;
 
@@ -12,4 +11,8 @@
 
 .phone-letter {
   color: $black;
+}
+
+.footer-menu-disclaimer {
+  font-size: 80%;
 }

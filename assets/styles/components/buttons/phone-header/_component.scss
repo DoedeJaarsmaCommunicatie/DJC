@@ -1,0 +1,26 @@
+@use "variable" as *;
+
+.phone-button {
+  background: $btn-phone-background;
+  color: $btn-phone-color;
+  padding: $btn-phone-padding;
+  margin: $btn-phone-margin;
+  border-radius: $btn-phone-border-radius;
+  transition: all 225ms linear;
+
+  &:hover {
+    background: $btn-phone-background--active;
+    color: $btn-phone-color--active;
+    transition: all 225ms linear;
+  }
+}
+
+@if $btn-phone-not-mobile {
+  @media screen and (max-width: 768px) {
+    .phone-button {
+      .number {
+        display: none;
+      }
+    }
+  }
+}

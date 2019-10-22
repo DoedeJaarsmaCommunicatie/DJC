@@ -17,7 +17,9 @@ class MenuServiceProvider
      * @var array
      */
     protected $menus = [
-        'primary-menu' => 'Primary',
+        'primary-menu'  => 'Primary',
+        'footer-menu'   => 'Footer Menu',
+        'service-menu'  => 'Diensten Menu',
     ];
     
     /**

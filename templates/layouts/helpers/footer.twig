@@ -1,15 +1,45 @@
-<footer class="footer border-t-2 border-primary py-8">
-    <div class="lg:flex container mx-auto">
-        <section class="lg:w-1/3"></section>
-        <section class="lg:w-1/3 text-center">
+{% from 'components/buttons/phone.html.twig' import phone_button as phone %}
+{% from 'components/buttons/menu.html.twig' import menu_item as menu %}
+<footer class="footer bg-gray py-8">
+    <div class="lg:flex container mx-auto px-4 lg:px-0">
+        <div class="lg:w-1/4 content">
+            <h2>Adres</h2>
             <p>
-                <i class="fas fa-map-marker"></i> Lauriergracht 54bg, 1016 RL Amsterdam
+                Lauriergracht 54bg, 1016 RL Amsterdam
             </p>
-            <a href="tel:0207852695" class="footer-phone">
-                <span class="phone-letter">T:</span>
-                020-7852695
+            <p>
+                {{ phone('footer-phone') }}
+            </p>
+        </div>
+        <div class="lg:w-1/4 content">
+            <h2>{{ __('Diensten', 'djc') }}</h2>
+            <nav class="footer-nav-diensten flex flex-col">
+                {% for item in serviceMenu.items %}
+                    {{ menu(item, 'footer-menu-item service-menu-item') }}
+                {% endfor %}
+            </nav>
+        </div>
+        <div class="lg:w-1/4">&nbsp;</div>
+        <div class="lg:w-1/4">
+            {% do fn('elementor_theme_do_location', 'footer-sidebar') %}
+        </div>
+    </div>
+    <div class="lg:flex container mx-auto px-4 lg:px-0 lg:mt-8">
+        <section class="footer-link">
+            {% for item in footerMenu.items %}
+                {{ menu(item, 'footer-menu-disclaimer') }}
+            {% endfor %}
+        </section>
+        <section class="lg:ml-auto footer-social">
+            <a href="#" class="social-button">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-button">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-button">
+                <i class="fab fa-instagram"></i>
             </a>
         </section>
-        <section class="lg:w-1/3"></section>
     </div>
 </footer>

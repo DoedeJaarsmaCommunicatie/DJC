@@ -1,0 +1,8 @@
+@use "abstracts" as *;
+
+$rp-color: $black !default;
+
+$rp-title-color: $primary !default;
+$rp-title-italic: true !default;
+$rp-title-size: 1.7rem !default;
+$rp-title-margin: 0 0 map-get($spacing, 'md') !default;

@@ -1,0 +1,10 @@
+@use "abstracts" as *;
+
+$btn-soc-size: 2rem !default;
+$btn-soc-width: $btn-soc-size !default;
+$btn-soc-height: $btn-soc-size !default;
+$btn-soc-border-radius: 50% !default;
+$btn-soc-background: scale-color($black, $lightness: 20%, $alpha: -80%) !default;
+$btn-soc-background--active: scale-color($black, $lightness: 20%, $alpha: -60%) !default;
+$btn-soc-color: $black !default;
+$btn-soc-color--active: $btn-soc-color !default;

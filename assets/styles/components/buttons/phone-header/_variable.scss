@@ -1,0 +1,10 @@
+@use "abstracts" as *;
+
+$btn-phone-background: scale-color($primary, $lightness: 60%, $alpha: -45%) !default;
+$btn-phone-background--active: $primary !default;
+$btn-phone-color: $primary !default;
+$btn-phone-color--active: $white !default;
+$btn-phone-padding: map-get($spacing, 'md') !default;
+$btn-phone-margin: 0 0 0 map-get($spacing, 'md') !default;
+$btn-phone-border-radius: $border-radius !default;
+$btn-phone-not-mobile: true !default;

@@ -4,3 +4,14 @@ $secondary-light: hsl(194, 100%, 60%);
 $white: hsl(0, 100%, 100%);
 $black: hsl(0, 0%, 0%);
 $gray: hsl(0, 0%, 94%);
+
+$border-radius: 5px !default;
+
+$spacing: (
+  'none': 0,
+  'sm': .25rem,
+  'md': .5rem,
+  'lg': .875rem,
+  'xl': 1rem,
+  'xxl': 2rem,
+);

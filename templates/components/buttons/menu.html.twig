@@ -1,0 +1,15 @@
+{% macro menu_item(item, class) %}
+    <a href="{{ item.link }}"
+       class="{{ class }} {{ item.classes|join(' ') }}"
+       title="{{ item.title }}"
+       target="{{ item.target }}"
+    >
+        {{ item.title }}
+    </a>
+{% endmacro menu_item %}
+
+{% macro submenu_item(item, class) %}
+    {% import _self as menu %}
+
+    {{ menu.menu_item(item, class ~ ' submenu-item') }}
+{% endmacro submenu_item %}

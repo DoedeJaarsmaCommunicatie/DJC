@@ -1,0 +1,21 @@
+@use "variable" as *;
+
+.related-project-banner {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 20px;
+
+  &[data-reversed="true"] {
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
+.related-project-title {
+  color: $rp-title-color;
+  font-size: $rp-title-size;
+  margin: $rp-title-margin;
+
+  @if $rp-title-italic {
+    font-style: italic;
+  }
+}
