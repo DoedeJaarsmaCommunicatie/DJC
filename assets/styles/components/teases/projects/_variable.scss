@@ -3,6 +3,26 @@
 $rp-color: $black !default;
 
 $rp-title-color: $primary !default;
-$rp-title-italic: true !default;
+$rp-title-italic: false !default;
 $rp-title-size: 1.7rem !default;
 $rp-title-margin: 0 0 map-get($spacing, 'md') !default;
+
+
+$rp-pill-border-width: 1px !default;
+$rp-pill-border-style: solid !default;
+$rp-pill-border-color: $gray !default;
+$rp-pill-border: $rp-pill-border-width $rp-pill-border-style $rp-pill-border-color !default;
+$rp-pill-border-radius: 50px !default;
+$rp-pill-padding: map-get($spacing, 'md') !default;
+$rp-pill-margin: map-get($spacing, 'md') !default;
+$rp-pill-color: $black !default;
+$rp-pill-background: $gray !default;
+$rp-pill-font-size: 65% !default;
+
+$rp-button-background: $secondary !default;
+$rp-button-background--active: scale-color($secondary, $lightness: -35%) !default;
+$rp-button-color: scale-color($white) !default;
+$rp-button-color--active: $rp-button-color !default;
+$rp-button-border-radius: $border-radius !default;
+$rp-button-padding: map-get($spacing, 'md') !default;
+$rp-button-margin: map-get($spacing, 'md') !default;
