@@ -765,6 +765,23 @@ html {
   transition: all 225ms ease;
 }
 
+.subservice-wrapper {
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-around;
+}
+
+.subservice {
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  background: white;
+  padding: 0.5rem;
+  position: relative;
+  -webkit-box-flex: 1;
+          flex: 1 1 auto;
+  max-width: 30%;
+}
+
 .header {
   position: -webkit-sticky;
   position: sticky;
