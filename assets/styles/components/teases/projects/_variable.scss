@@ -4,9 +4,11 @@ $rp-color: $black !default;
 
 $rp-title-color: $primary !default;
 $rp-title-italic: false !default;
-$rp-title-size: 1.7rem !default;
+$rp-title-size: 1.6rem !default;
 $rp-title-margin: 0 0 map-get($spacing, 'md') !default;
+$rp-title-font-weight: 700 !default;
 
+$rp-content-font-weight: 300 !default;
 
 $rp-pill-border-width: 1px !default;
 $rp-pill-border-style: solid !default;

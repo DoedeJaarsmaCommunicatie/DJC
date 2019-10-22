@@ -634,6 +634,12 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.content h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
 .phone-button {
   background: white;
   color: #ff961f;
@@ -707,6 +713,7 @@ html {
 
 .related-project-content {
   grid-area: content;
+  font-weight: 300;
 }
 
 .related-project-figure {
@@ -715,8 +722,9 @@ html {
 
 .related-project-title {
   color: #ff961f;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   margin: 0 0 0.5rem;
+  font-weight: 700;
 }
 
 .related-project-pills {
@@ -861,6 +869,10 @@ html {
 
 .footer-menu-disclaimer {
   font-size: 80%;
+}
+
+.footer-title {
+  color: #ff961f;
 }
 
 .project-hero {

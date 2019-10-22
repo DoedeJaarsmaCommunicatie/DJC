@@ -24,6 +24,7 @@
 
 .related-project-content {
   grid-area: content;
+  font-weight: $rp-content-font-weight;
 }
 
 .related-project-figure {
@@ -35,6 +36,7 @@
   color: $rp-title-color;
   font-size: $rp-title-size;
   margin: $rp-title-margin;
+  font-weight: $rp-title-font-weight;
 
   @if $rp-title-italic {
     font-style: italic;

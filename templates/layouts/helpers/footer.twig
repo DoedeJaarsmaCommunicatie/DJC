@@ -3,16 +3,16 @@
 <footer class="footer bg-gray py-8">
     <div class="lg:flex container mx-auto px-4 lg:px-0">
         <div class="lg:w-1/4 content">
-            <h2>Adres</h2>
+            <h2 class="footer-title">Adres</h2>
             <p>
-                Lauriergracht 54bg, 1016 RL Amsterdam
+                {{ theme.theme_mod('address') }}
             </p>
             <p>
                 {{ phone('footer-phone') }}
             </p>
         </div>
         <div class="lg:w-1/4 content">
-            <h2>{{ __('Diensten', 'djc') }}</h2>
+            <h2 class="footer-title">{{ __('Diensten', 'djc') }}</h2>
             <nav class="footer-nav-diensten flex flex-col">
                 {% for item in serviceMenu.items %}
                     {{ menu(item, 'footer-menu-item service-menu-item') }}

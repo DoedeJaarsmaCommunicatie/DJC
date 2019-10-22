@@ -4,3 +4,11 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.content {
+  h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+}
