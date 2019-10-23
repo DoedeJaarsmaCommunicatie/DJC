@@ -777,6 +777,10 @@ a.btn.djc-button.secondary-outlined,
   }
 }
 
+.related-project-banner :not(:last-of-type) {
+  margin-bottom: 2%;
+}
+
 .related-project-content {
   grid-area: content;
   font-weight: 300;
@@ -829,6 +833,37 @@ a.btn.djc-button.secondary-outlined,
   color: white;
   -webkit-transition: all 225ms ease;
   transition: all 225ms ease;
+}
+
+.service-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service {
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  background: white;
+  padding: 0.5rem;
+  position: relative;
+  -webkit-box-flex: 1;
+          flex: 1 1 auto;
+  max-width: 30%;
+  min-width: 30%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-bottom: 5%;
+}
+
+.service-title {
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .subservice-wrapper {
@@ -1014,6 +1049,31 @@ h4.djc-title {
 
 .footer-title {
   color: #ff961f;
+}
+
+.footer {
+  position: relative;
+}
+
+.footer-separator {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  direction: ltr;
+  top: 0;
+}
+
+.footer-separator svg {
+  display: block;
+  width: calc(150% + 1.5px);
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  fill: #fff;
+  height: 40px;
 }
 
 .project-hero {

@@ -1,26 +1,2 @@
 @use "abstracts" as *;
 
-$service-sub-border-width: 1px !default;
-$service-sub-border-style: solid !default;
-$service-sub-border-color: $gray !default;
-$service-sub-border: $service-sub-border-width $service-sub-border-style $service-sub-border-color !default;
-$service-sub-border-radius: $border-radius !default;
-$service-sub-background: $white !default;
-$service-sub-padding: map-get($spacing, 'md') !default;
-$service-sub-max-width: 30% !default;
-
-$service-sub-title-font-size: 1.1rem !default;
-$service-sub-title-font-weight: bold !default;
-
-$service-sub-fab-margin: auto auto 0 !default;
-$service-sub-fab-border-radius: $border-radius !default;
-$service-sub-fab-padding: map-get($spacing, 'sm') map-get($spacing, 'md') !default;
-$service-sub-fab-border-width: $service-sub-border-width !default;
-$service-sub-fab-border-style: $service-sub-border-style !default;
-$service-sub-fab-border-color: $primary !default;
-$service-sub-fab-border: $service-sub-fab-border-width $service-sub-fab-border-style $service-sub-fab-border-color !default;
-$service-sub-fab-color: $primary !default;
-$service-sub-fab-color--active: $white !default;
-$service-sub-fab-background: $white !default;
-$service-sub-fab-background--active: $primary !default;
-

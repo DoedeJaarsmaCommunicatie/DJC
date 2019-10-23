@@ -1,0 +1,54 @@
+@use "variable" as *;
+
+.subservice-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subservice {
+  border: $service-sub-border;
+  border-radius: $service-sub-border-radius;
+  background: $service-sub-background;
+  padding: $service-sub-padding;
+  position: relative;
+  flex: 1 1 auto;
+  max-width: $service-sub-max-width;
+  display: flex;
+  flex-direction: column;
+}
+
+.subservice-title {
+  font-weight: $service-sub-title-font-weight;
+  font-size: $service-sub-title-font-size;
+}
+
+.subservice-fab {
+  margin: $service-sub-fab-margin;
+  border-radius: $service-sub-fab-border-radius;
+  padding: $service-sub-fab-padding;
+  display: inline-block;
+  border: $service-sub-fab-border;
+  color: $service-sub-fab-color;
+  background: $service-sub-fab-background;
+
+  @if ($service-sub-fab-color != $service-sub-fab-color--active) or
+      ($service-sub-fab-background != $service-sub-fab-background--active) {
+    transition: all 225ms ease;
+
+    &:hover {
+      transition: all 225ms ease;
+    }
+  }
+
+  @if $service-sub-fab-color != $service-sub-fab-color--active {
+    &:hover {
+      color: $service-sub-fab-color--active;
+    }
+  }
+
+  @if $service-sub-fab-background != $service-sub-fab-background--active {
+    &:hover {
+      background: $service-sub-fab-background--active;
+    }
+  }
+}

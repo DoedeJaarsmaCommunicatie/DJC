@@ -21,3 +21,29 @@
 .footer-title {
   color: $primary;
 }
+
+.footer {
+  position: relative;
+}
+
+.footer-separator {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  direction: ltr;
+  top: 0;
+
+  svg {
+    display: block;
+    width: calc(150% + 1.5px);
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    fill: #fff;
+    height: 40px;
+  }
+}

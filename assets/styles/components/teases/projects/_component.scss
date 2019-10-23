@@ -20,6 +20,10 @@
       grid-template-areas: "content" "thumbnail";
     }
   }
+
+  :not(:last-of-type) {
+    margin-bottom: 2%;
+  }
 }
 
 .related-project-content {
@@ -30,7 +34,6 @@
 .related-project-figure {
   grid-area: thumbnail;
 }
-
 
 .related-project-title {
   color: $rp-title-color;
