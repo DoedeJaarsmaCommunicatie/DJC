@@ -1,0 +1,8 @@
+@use "variable" as *;
+
+@each $heading, $font in $fonts {
+  h#{$heading}.djc-title {
+    font-weight: unquote(map-get($font, 'weight'));
+    font-size: unquote(map-get($font, 'size'));
+  }
+}

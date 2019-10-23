@@ -640,6 +640,72 @@ html {
   margin-bottom: 1rem;
 }
 
+.djc-button,
+a.btn.djc-button,
+.btn.djc-button,
+.elementor a.btn.djc-button {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-style: normal;
+  padding: 0.5rem;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.djc-button.primary,
+a.btn.djc-button.primary,
+.btn.djc-button.primary,
+.elementor a.btn.djc-button.primary {
+  color: black;
+  background-color: #ff961f;
+  border-color: #ff961f;
+}
+
+.djc-button.primary-outlined,
+a.btn.djc-button.primary-outlined,
+.btn.djc-button.primary-outlined,
+.elementor a.btn.djc-button.primary-outlined {
+  color: #ff961f;
+  border-color: #ff961f;
+  background-color: transparent;
+}
+
+.djc-button.black,
+a.btn.djc-button.black,
+.btn.djc-button.black,
+.elementor a.btn.djc-button.black {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+
+.djc-button.black-outlined,
+a.btn.djc-button.black-outlined,
+.btn.djc-button.black-outlined,
+.elementor a.btn.djc-button.black-outlined {
+  color: black;
+  border-color: black;
+  background-color: transparent;
+}
+
+.djc-button.secondary,
+a.btn.djc-button.secondary,
+.btn.djc-button.secondary,
+.elementor a.btn.djc-button.secondary {
+  color: white;
+  background-color: #0089b3;
+  border-color: #0089b3;
+}
+
+.djc-button.secondary-outlined,
+a.btn.djc-button.secondary-outlined,
+.btn.djc-button.secondary-outlined,
+.elementor a.btn.djc-button.secondary-outlined {
+  color: #0089b3;
+  border-color: #0089b3;
+  background-color: transparent;
+}
+
 .phone-button {
   background: white;
   color: #ff961f;
@@ -768,7 +834,8 @@ html {
 .subservice-wrapper {
   display: -webkit-box;
   display: flex;
-  justify-content: space-around;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
 }
 
 .subservice {
@@ -780,6 +847,61 @@ html {
   -webkit-box-flex: 1;
           flex: 1 1 auto;
   max-width: 30%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.subservice-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.subservice-fab {
+  margin: auto auto 0;
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+  display: inline-block;
+  border: 1px solid #ff961f;
+  color: #ff961f;
+  background: white;
+  -webkit-transition: all 225ms ease;
+  transition: all 225ms ease;
+}
+
+.subservice-fab:hover {
+  -webkit-transition: all 225ms ease;
+  transition: all 225ms ease;
+}
+
+.subservice-fab:hover {
+  color: white;
+}
+
+.subservice-fab:hover {
+  background: #ff961f;
+}
+
+h1.djc-title {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+h2.djc-title {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+h3.djc-title {
+  font-weight: bold;
+  font-size: 1.45rem;
+}
+
+h4.djc-title {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .header {

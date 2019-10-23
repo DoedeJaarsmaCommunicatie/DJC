@@ -1,0 +1,20 @@
+@use "abstracts" as *;
+
+$fonts: (
+  '1': (
+    'size': '1.8rem',
+    'weight': 'bold',
+  ),
+  '2': (
+    'size': '1.6rem',
+    'weight': 'bold',
+  ),
+  '3': (
+    'size': '1.45rem',
+    'weight': 'bold',
+  ),
+  '4': (
+    'size': '1.2rem',
+    'weight': 'bold',
+  ),
+) !default;
