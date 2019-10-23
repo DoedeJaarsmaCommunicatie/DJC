@@ -11,3 +11,17 @@
         </span>
     </a>
 {% endmacro phone_button %}
+
+{% macro email_button(class, with_icon = false) %}
+    {% set _mail = fn('get_theme_mod', 'email', 'mail@doedejaarsma.nl') %}
+    <a href="mailto:{{ _mail }}" class="{{ class }} emailaddress">
+        {% if with_icon %}
+            <i class="fas fa-envelope"></i>
+        {% else %}
+            <span class="phone-letter">M:</span>
+        {% endif %}
+        <span class="number">
+            {{ _mail }}
+        </span>
+    </a>
+{% endmacro email_button %}

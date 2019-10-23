@@ -41,6 +41,15 @@ class GeneralInfoController extends GeneralCustomizer
         [
             'id'       => CustomizerServiceProvider::CONFIG_ID,
             'type'     => 'text',
+            'settings' => 'address-2',
+            'label'    => 'Adresregel 2',
+            'section'  => 'general_settings',
+            'default'  => '16016RL Amsterdam',
+            'priority' => 10,
+        ],
+        [
+            'id'       => CustomizerServiceProvider::CONFIG_ID,
+            'type'     => 'text',
             'settings' => 'phone',
             'label'    => 'Telefoonnummer',
             'section'  => 'general_settings',

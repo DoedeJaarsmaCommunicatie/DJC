@@ -1,5 +1,6 @@
-{% from 'components/buttons/phone.html.twig' import phone_button as phone %}
+{% from 'components/buttons/phone.html.twig' import phone_button as phone, email_button as email %}
 {% from 'components/buttons/menu.html.twig' import menu_item as menu %}
+
 <footer class="footer bg-gray py-8">
     <div class="lg:flex container mx-auto px-4 lg:px-0">
         <div class="lg:w-1/4 content">
@@ -8,7 +9,13 @@
                 {{ theme.theme_mod('address') }}
             </p>
             <p>
+                {{ theme.theme_mod('address-2') }}
+            </p>
+            <p>
                 {{ phone('footer-phone') }}
+            </p>
+            <p>
+                {{ email('footer-email') }}
             </p>
         </div>
         <div class="lg:w-1/4 content">
@@ -31,13 +38,13 @@
             {% endfor %}
         </section>
         <section class="lg:ml-auto footer-social">
-            <a href="#" class="social-button">
+            <a href="{{ theme.theme_mod('facebook-url')?? '#' }}" class="social-button">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="#" class="social-button">
+            <a href="{{ theme.theme_mod('linkedin-url')?? '#' }}" class="social-button">
                 <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" class="social-button">
+            <a href="{{ theme.theme_mod('instagram-url')?? '#' }}" class="social-button">
                 <i class="fab fa-instagram"></i>
             </a>
         </section>

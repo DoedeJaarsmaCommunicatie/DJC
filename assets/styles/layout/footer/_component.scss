@@ -1,6 +1,7 @@
 @use "abstracts" as *;
 
-.footer-phone {
+.footer-phone,
+.footer-email {
   color: scale-color($black, $alpha: -40%);
   transition: all 225ms ease;
 
