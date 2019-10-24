@@ -1,0 +1,27 @@
+@use "variable" as *;
+
+.elementor .elementor-widget {
+  .employee-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .employee-image {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+    }
+
+    > figure.employee-figure {
+      margin-right: 1rem;
+    }
+  }
+
+  .employee-contact-method {
+    color: scale-color(#000, $alpha: -40%);
+    transition: all 225ms ease;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
