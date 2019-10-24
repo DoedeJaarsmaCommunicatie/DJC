@@ -1,2 +1,10 @@
 @use "abstracts" as *;
 
+$service-border-width: 1px !default;
+$service-border-style: solid !default;
+$service-border-color: $white !default;
+$service-border: $service-border-width $service-border-style $service-border-color !default;
+$service-border-radius: $border-radius !default;
+$service-background: $white !default;
+$service-padding: map-get($spacing, 'md') !default;
+
