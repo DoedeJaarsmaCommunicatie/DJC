@@ -1,7 +1,7 @@
 {% from 'components/buttons/phone.html.twig' import phone_button as phone, email_button as email %}
 {% from 'components/buttons/menu.html.twig' import menu_item as menu %}
 
-<footer class="footer bg-gray py-8">
+<footer class="footer bg-white py-8">
     <aside class="footer-separator">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 10" preserveAspectRatio="none">
             <path class="" d="M350,10L340,0h20L350,10z"></path>
@@ -43,13 +43,13 @@
             {% endfor %}
         </section>
         <section class="lg:ml-auto footer-social">
-            <a href="{{ theme.theme_mod('facebook-url')?? '#' }}" class="social-button">
+            <a href="{{ theme.theme_mod('facebook-url')?? '#' }}" class="social-button" title="Bekijk Facebook pagina">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="{{ theme.theme_mod('linkedin-url')?? '#' }}" class="social-button">
+            <a href="{{ theme.theme_mod('linkedin-url')?? '#' }}" class="social-button" title="Bekijk LinkedIn pagina">
                 <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="{{ theme.theme_mod('instagram-url')?? '#' }}" class="social-button">
+            <a href="{{ theme.theme_mod('instagram-url')?? '#' }}" class="social-button" title="Bekijk Instagram pagina">
                 <i class="fab fa-instagram"></i>
             </a>
         </section>

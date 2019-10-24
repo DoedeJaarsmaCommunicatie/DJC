@@ -1,0 +1,14 @@
+@use "abstracts" as *;
+
+$btn-pag-padding: map-get($spacing, 'sm') map-get($spacing, 'md') !default;
+$btn-pag-border-width: 1px !default;
+$btn-pag-border-style: solid !default;
+$btn-pag-border-color: $primary !default;
+$btn-pag-border: $btn-pag-border-width $btn-pag-border-style $btn-pag-border-color !default;
+$btn-pag-border-radius: $border-radius !default;
+
+$btn-pag-background: $white !default;;
+$btn-pag-background--active: $primary !default;;
+$btn-pag-color: $primary !default;
+$btn-pag-color--active: $white !default;
+

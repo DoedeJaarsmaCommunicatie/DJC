@@ -12,13 +12,13 @@ $rp-content-font-weight: 300 !default;
 
 $rp-pill-border-width: 1px !default;
 $rp-pill-border-style: solid !default;
-$rp-pill-border-color: $gray !default;
+$rp-pill-border-color: $white !default;
 $rp-pill-border: $rp-pill-border-width $rp-pill-border-style $rp-pill-border-color !default;
 $rp-pill-border-radius: 50px !default;
 $rp-pill-padding: map-get($spacing, 'md') !default;
 $rp-pill-margin: map-get($spacing, 'md') !default;
 $rp-pill-color: $black !default;
-$rp-pill-background: $gray !default;
+$rp-pill-background: $white !default;
 $rp-pill-font-size: 65% !default;
 
 $rp-button-background: $secondary !default;

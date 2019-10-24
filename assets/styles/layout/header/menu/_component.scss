@@ -3,7 +3,7 @@
 .mega-submenu {
   > .submenu-wrapper {
     > .submenu-item {
-      color: #FF961F;
+      color: #000000;
       white-space: nowrap;
       font-weight: bold;
       margin-top: 1rem;
@@ -15,9 +15,15 @@
 
   .menu-wrapper {
     position: relative;
+
+    .menu-item {
+      text-transform:lowercase;
+      font-weight:300;
+    }
+
     &:hover {
       .mega-submenu {
-        display: flex;
+        display: block;
         opacity: 1;
       }
     }
@@ -42,9 +48,20 @@
     z-index: 10;
 
     > .submenu-wrapper {
+      svg {
+        display: none;
+      }
+
       > .submenu-item {
         margin-bottom: 1rem;
         margin-top: 0;
+        font-weight:300;
+      }
+
+      .submenu-wrapper {
+        > .menu-item {
+          font-weight:300;
+        }
       }
 
       &:not(:last-of-type) {
@@ -79,5 +96,13 @@
 
   .menu-item {
     display: block;
+  }
+
+  .mega-submenu {
+    margin-bottom: .5rem;
+
+    svg {
+      display: none;
+    }
   }
 }

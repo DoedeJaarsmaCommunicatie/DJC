@@ -6,3 +6,22 @@
     font-size: unquote(map-get($font, 'size'));
   }
 }
+
+h1.djc-title {
+  &.content {
+    padding-top: 1.4rem;
+  }
+  position: relative;
+
+  &:before {
+    content: '';
+    background-color: $heading-top-bar-color;
+    display: block;
+    height: $heading-top-bar-height;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: $heading-top-bar-width;
+  }
+}
+

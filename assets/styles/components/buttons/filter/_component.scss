@@ -1,0 +1,16 @@
+@use "variable" as *;
+
+.filter-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.project-filter {
+  border: 1px solid #ff961f;
+  background: white;
+  color: #ff961f;
+  border-radius: 5px;
+  padding: .5rem;
+}

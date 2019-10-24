@@ -21,8 +21,8 @@
     }
   }
 
-  :not(:last-of-type) {
-    margin-bottom: 2%;
+  &:not(:last-of-type) {
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -46,7 +46,8 @@
   }
 }
 
-.related-project-pills {
+.related-project-pills,
+.project-pills {
   display: flex;
   flex-wrap: wrap;
 }

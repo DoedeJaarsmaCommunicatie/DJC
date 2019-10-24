@@ -5,6 +5,10 @@
        target="{{ item.target }}"
     >
         {{ item.title }}
+
+        {% if item.children %}
+            <i class="fas fa-chevron-down"></i>
+        {% endif %}
     </a>
 {% endmacro menu_item %}
 

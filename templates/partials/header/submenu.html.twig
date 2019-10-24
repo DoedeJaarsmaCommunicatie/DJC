@@ -5,9 +5,9 @@
         <div class="submenu-wrapper" data-parent="{{ item.name|sanitize }}">
             {{ submenu_item(child, 'submenu-item') }}
 
-            {% if child.children %}
-                {{ include('partials/header/submenu.html.twig', { item: child }) }}
-            {% endif %}
+{#            {% if child.children %}#}
+{#                {{ include('partials/header/submenu.html.twig', { item: child }) }}#}
+{#            {% endif %}#}
         </div>
     {% endfor %}
 {% endif %}

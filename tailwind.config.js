@@ -10,10 +10,10 @@ module.exports = {
         default: 'hsl(194,100%,35%)',
       },
       gray: {
-        default: '#efefef',
+        default: 'hsl(0, 0%, 96%)',
       },
       white: {
-        default: '#fff'
+        default: 'hsl(0, 0%, 100%)'
       }
     }
   },
