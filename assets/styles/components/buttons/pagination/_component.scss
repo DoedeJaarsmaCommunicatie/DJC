@@ -7,16 +7,11 @@
 }
 
 .pagination {
-  padding: .25rem .5rem;
-  border: 1px solid orange;
-  color: orange;
-  background: white;
-  border-radius: 5px;
-
-  &.active {
-    background: orange;
-    color: white;
-  }
+  padding: $btn-pag-padding;
+  border: $btn-pag-border;
+  color: $btn-pag-color;
+  background: $btn-pag-background;
+  border-radius: $btn-pag-border-radius;
 
   &:not(:last-of-type) {
     margin-right: .5rem;

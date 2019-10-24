@@ -3,14 +3,36 @@
 .filter-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin-bottom: 2.5rem;
 }
 
 .project-filter {
-  border: 1px solid #ff961f;
-  background: white;
-  color: #ff961f;
-  border-radius: 5px;
-  padding: .5rem;
+  border: $btn-proj-filter-border;
+  background: $btn-proj-filter-background;
+  color: $btn-proj-filter-color;
+  border-radius: $btn-proj-filter-border-radius ;
+  padding: $btn-proj-filter-padding;
+  font-size: $btn-proj-filter-font-size;
+  margin: $btn-proj-filter-margin;
+
+  @if ($btn-proj-filter-color != $btn-proj-filter-color--active) or
+      ($btn-proj-filter-background != $btn-proj-filter-background--active) {
+    transition: all 225ms ease;
+
+    &:hover {
+      transition: all 225ms ease;
+    }
+  }
+
+  @if ($btn-proj-filter-color != $btn-proj-filter-color--active) {
+    &:hover {
+      color: $btn-proj-filter-color--active;
+    }
+  }
+  @if ($btn-proj-filter-background != $btn-proj-filter-background--active) {
+    &:hover {
+      background: $btn-proj-filter-background--active;
+    }
+  }
+
 }

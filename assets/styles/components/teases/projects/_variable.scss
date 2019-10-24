@@ -2,7 +2,7 @@
 
 $rp-color: $black !default;
 
-$rp-title-color: $primary !default;
+$rp-title-color: $black !default;
 $rp-title-italic: false !default;
 $rp-title-size: 1.6rem !default;
 $rp-title-margin: 0 0 map-get($spacing, 'md') !default;
@@ -21,10 +21,10 @@ $rp-pill-color: $black !default;
 $rp-pill-background: $white !default;
 $rp-pill-font-size: 65% !default;
 
-$rp-button-background: $secondary !default;
-$rp-button-background--active: scale-color($secondary, $lightness: -35%) !default;
+$rp-button-background: $primary !default;
+$rp-button-background--active: scale-color($primary, $lightness: -35%) !default;
 $rp-button-color: scale-color($white) !default;
 $rp-button-color--active: $rp-button-color !default;
-$rp-button-border-radius: $border-radius !default;
-$rp-button-padding: map-get($spacing, 'md') !default;
+$rp-button-border-radius: 50px !default;
+$rp-button-padding: map-get($spacing, 'md') map-get($spacing, 'lg') !default;
 $rp-button-margin: map-get($spacing, 'md') !default;

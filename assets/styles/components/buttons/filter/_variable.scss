@@ -1,2 +1,15 @@
 @use "abstracts" as *;
 
+$btn-proj-filter-border-width: 1px !default;
+$btn-proj-filter-border-style: solid !default;
+$btn-proj-filter-border-color: $primary !default;
+$btn-proj-filter-border: $btn-proj-filter-border-width $btn-proj-filter-border-style $btn-proj-filter-border-color !default;
+$btn-proj-filter-border-radius: 50px !default;
+
+$btn-proj-filter-background: $white !default;
+$btn-proj-filter-background--active: $primary !default;
+$btn-proj-filter-color: $primary !default;
+$btn-proj-filter-color--active: $white !default;
+$btn-proj-filter-padding: map-get($spacing, 'md') map-get($spacing, 'lg') !default;
+$btn-proj-filter-margin: 0 1rem 0 0 !default;
+$btn-proj-filter-font-size: 70% !default;

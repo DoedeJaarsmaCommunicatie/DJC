@@ -7,43 +7,75 @@ a.btn.djc-button,
   border: 1px solid transparent;
   border-radius: $btn-border-radius;
   font-style: normal;
-  padding: .5rem;
+  padding: .5rem 1rem;
   font-weight: 300;
   font-size: 1rem;
+  transition: all 225ms ease;
+
+  &:hover {
+    transition: all 225ms ease;
+  }
 
   &.primary {
     color: $btn-black;
     background-color: $btn-primary;
     border-color: $btn-primary;
+
+    &:hover {
+      background-color: scale-color($btn-primary, $lightness: -35%);
+    }
   }
 
   &.primary-outlined {
     color: $btn-primary;
     border-color: $btn-primary;
     background-color: transparent;
+
+    &:hover {
+      color: $btn-white;
+      background-color: $btn-primary;
+    }
   }
 
   &.black {
     color: $btn-white;
     background-color: $btn-black;
     border-color: $btn-black;
+
+    &:hover {
+      background-color: scale-color($btn-black, $lightness: 35%);
+    }
   }
 
   &.black-outlined {
     color: $btn-black;
     border-color: $btn-black;
     background-color: transparent;
+
+    &:hover {
+      color: $btn-white;
+      background-color: $btn-black;
+    }
   }
 
   &.secondary {
     color: $btn-white;
     background-color: $btn-secondary;
     border-color: $btn-secondary;
+
+    &:hover {
+      background-color: scale-color($btn-secondary, $lightness: -35%);
+    }
   }
 
   &.secondary-outlined {
     color: $btn-secondary;
     border-color: $btn-secondary;
     background-color: transparent;
+
+    &:hover {
+      color: $btn-white;
+      background-color: $btn-secondary;
+    }
   }
 }
