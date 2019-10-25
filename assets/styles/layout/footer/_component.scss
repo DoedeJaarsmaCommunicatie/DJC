@@ -37,13 +37,24 @@
 
   svg {
     display: block;
-    width: calc(150% + 1.5px);
     position: relative;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     fill: #f4f4f4;
+
+    width: calc(150% + 1.5px);
     height: 40px;
+
+    @media screen and (max-width: 768px) {
+      width: calc(230% + 1.5px);
+      height: 30px;
+    }
+
+    @media screen and (max-width: 414px) {
+      width: calc(300% + 1.3px);
+      height: 20px;
+    }
   }
 }

@@ -5,13 +5,13 @@
     > .submenu-item {
       color: #000000;
       white-space: nowrap;
-      font-weight: bold;
+      font-weight: 300;
       margin-top: 1rem;
     }
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1024px) {
 
   .menu-wrapper {
     position: relative;
@@ -71,7 +71,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
   .navbar {
     position: fixed;
     top: 0;
@@ -103,6 +103,9 @@
 
     svg {
       display: none;
+    }
+    .submenu-item {
+      margin-left: .5rem;
     }
   }
 }

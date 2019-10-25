@@ -2,7 +2,6 @@
 
 .subservice-wrapper {
   display: flex;
-  justify-content: space-between;
 }
 
 .subservice {
@@ -15,6 +14,14 @@
   max-width: $service-sub-max-width;
   display: flex;
   flex-direction: column;
+
+  &:nth-of-type(-n+3) {
+    margin-bottom: 3%;
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 3%;
+  }
 }
 
 .subservice-title {

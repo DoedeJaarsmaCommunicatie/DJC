@@ -11,6 +11,16 @@
     grid-template-areas: "thumbnail content";
   }
 
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "content content" "thumbnail thumbnail";
+
+    &[data-reversed="1"] {
+      grid-template-columns: 1fr;
+      grid-template-areas: "content content" "thumbnail thumbnail";
+    }
+  }
+
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
     grid-template-areas: "content" "thumbnail";
