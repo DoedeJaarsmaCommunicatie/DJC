@@ -3,7 +3,6 @@
 .elementor .elementor-widget {
   .employee-wrapper {
     display: flex;
-    //justify-content: center;
 
     .employee-image {
       width: 130px;
@@ -13,6 +12,10 @@
 
     > figure.employee-figure {
       margin-right: 1rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+      display: block;
     }
   }
 
@@ -28,4 +31,6 @@
   .employee-name {
     margin: 0 0 .5rem;
   }
+
+
 }
