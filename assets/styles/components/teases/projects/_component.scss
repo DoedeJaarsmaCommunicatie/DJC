@@ -57,8 +57,10 @@
 }
 
 .related-project-image {
+  transition: all 225ms ease;
   &[data-src] {
     filter: blur(3px);
+    transition: all 225ms ease;
   }
 }
 
