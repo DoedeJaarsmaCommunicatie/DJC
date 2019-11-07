@@ -42,7 +42,7 @@ export default class MenuToggle {
             return;
         }
 
-        this.menu.classList.remove(MenuToggle.INACTIVE_CLASS);
+        this.menu.classList.add(MenuToggle.INACTIVE_CLASS);
     }
 
     setMenu(menu) {
