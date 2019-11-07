@@ -55,7 +55,7 @@ export default class LazyLoader {
     observerCallback(entries, observer) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                if (entry.intersectionRatio >= .45) {
+                if (entry.intersectionRatio > 0) {
                     // noinspection JSCheckFunctionSignatures
                     LazyLoader.showImage(entry.target);
                     observer.unobserve(entry.target);
