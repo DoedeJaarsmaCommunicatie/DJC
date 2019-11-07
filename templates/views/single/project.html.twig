@@ -21,7 +21,7 @@
             </div>
             <div class="lg:w-2/3">
                 <figure>
-                    <img src="{{ post.thumbnail.src?? '//via.placeholder.com/1200x600' }}" alt="{{ post.thumbnail.alt }}">
+                    <img src="{{ post.thumbnail.src('large')?? '//via.placeholder.com/1200x600' }}" alt="{{ post.thumbnail.alt }}">
                 </figure>
             </div>
         </div>

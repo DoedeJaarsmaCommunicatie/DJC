@@ -3,7 +3,9 @@
 .filter-wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 2.5rem;
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 2.5rem;
+  }
 }
 
 .project-filter {
@@ -35,4 +37,7 @@
     }
   }
 
+  @media screen and (max-width: 1024px) {
+    margin-bottom: .5rem;
+  }
 }

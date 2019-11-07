@@ -5,26 +5,20 @@ export default {
 
     finalize() {
         // Javascript that fires on all pages. after page specific JS is fires.
-        menuToggler();
+        menuToggleBelowTablet();
     }
 }
 
-const menuToggler = () => {
-    const hamburger = document.querySelector('.js-toggle-menu');
-    const menu = document.querySelector('.navbar');
+const menuToggler = async () => {
+    const i = async () =>
+        (await import(/* webpackChunkName: "dist/scripts/common/menu" */'./Common/Menu')).default;
+    const I = await i();
+    const Toggler = new I('.navbar', '.js-toggle-menu');
+    Toggler.init();
+}
 
-    hamburger.addEventListener('click', function () {
-        menu.classList.remove('hidden');
-    })
-
-    document.body.addEventListener('click', function(ev) {
-        if (ev.target === menu ||
-            menu.contains(ev.target) ||
-            ev.target === hamburger ||
-            hamburger.contains(ev.target)) {
-            return;
-        }
-
-        menu.classList.add('hidden');
-    });
+const menuToggleBelowTablet = () => {
+    if (window.screen.width < 1025) {
+        menuToggler();
+    }
 }
