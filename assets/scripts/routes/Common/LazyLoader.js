@@ -72,6 +72,7 @@ export default class LazyLoader {
      */
     static showImage(el) {
         el.src = el.dataset.src;
+        el.removeAttribute('data-src');
     }
 
     /**
