@@ -1,6 +1,6 @@
 {% macro phone_button(class, with_icon = false) %}
     {% set _number = fn('get_theme_mod', 'phone', '020-7852695') %}
-    <a href="tel:{{ _number }}" class="{{ class }} phonenumber">
+    <a href="tel:{{ _number }}" class="{{ class }} phonenumber" aria-label="Bel ons">
         {% if with_icon %}
             <i class="fas fa-phone fa-flip-horizontal"></i>
         {% else %}
@@ -14,7 +14,7 @@
 
 {% macro email_button(class, with_icon = false) %}
     {% set _mail = fn('get_theme_mod', 'email', 'mail@doedejaarsma.nl') %}
-    <a href="mailto:{{ _mail }}" class="{{ class }} emailaddress">
+    <a href="mailto:{{ _mail }}" class="{{ class }} emailaddress" aria-label="Mail ons">
         {% if with_icon %}
             <i class="fas fa-envelope"></i>
         {% else %}

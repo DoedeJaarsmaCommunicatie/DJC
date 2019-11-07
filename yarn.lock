@@ -1339,6 +1339,10 @@ babel-plugin-dynamic-import-node@^2.3.0:
   dependencies:
     object.assign "^4.1.0"
 
+babel-plugin-feature-flags@ember-cli/babel-plugin-feature-flags:
+  version "0.3.1"
+  resolved "https://codeload.github.com/ember-cli/babel-plugin-feature-flags/tar.gz/90ffe540a4cfa87b0f59ec67aac94566e38571dd"
+
 balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
