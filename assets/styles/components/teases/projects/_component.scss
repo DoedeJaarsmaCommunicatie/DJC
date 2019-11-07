@@ -56,6 +56,12 @@
   }
 }
 
+.related-project-image {
+  &[data-src] {
+    filter: blur(3px);
+  }
+}
+
 .related-project-pills,
 .project-pills {
   display: flex;
