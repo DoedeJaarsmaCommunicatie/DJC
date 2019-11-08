@@ -8,13 +8,13 @@
             {% endif %}
         </section>
         <div class="header-end ml-auto my-auto flex">
-            <div class="navbar my-auto hidden lg:flex">
+            <div class="js-navbar-wrapper navbar-wrapper my-auto hidden lg:flex">
                 {{ include('partials/header/navbar.html.twig') }}
             </div>
-            <button class="hamburger js-toggle-menu lg:hidden" type="button" aria-label="Hamburger">
+            {{ include('partials/header/phone.html.twig') }}
+            <button class="hamburger js-toggle-menu lg:hidden ml-2" type="button" aria-label="Hamburger">
                 <i class="fas fa-bars"></i>
             </button>
-            {{ include('partials/header/phone.html.twig') }}
         </div>
     </div>
 </header>

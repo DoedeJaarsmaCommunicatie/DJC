@@ -72,6 +72,16 @@
 }
 
 @media screen and (max-width: 1023px) {
+  .navbar-wrapper {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(3px);
+  }
+
   .navbar {
     position: fixed;
     top: 0;

@@ -14,8 +14,9 @@ const menuToggler = async () => {
     const i = async () =>
         (await import(/* webpackChunkName: "dist/scripts/common/menu" */'./Common/Menu')).default;
     const I = await i();
-    const Toggler = new I('.navbar', '.js-toggle-menu');
-    Toggler.init();
+    new I('.js-navbar-wrapper', '.navbar', '.js-toggle-menu')
+        .enableBodyBlockFlag()
+        .init();
 }
 
 const menuToggleBelowTablet = () => {

@@ -1,10 +1,15 @@
 export default class MenuToggle {
     static INACTIVE_CLASS = 'hidden';
 
+    options = {
+        blockBodyScroll: false,
+    };
+
     menu;
     hamburger;
 
-    constructor(menu, burger) {
+    constructor(wrapper, menu, burger) {
+        this.setWrapper(wrapper);
         this.setMenu(menu);
         this.setBurger(burger);
     }
@@ -27,7 +32,9 @@ export default class MenuToggle {
      * @param {event|MouseEvent} ev
      */
     burgerEventListener(ev) {
-        this.menu.classList.remove(MenuToggle.INACTIVE_CLASS);
+        this.wrapper.classList.remove(MenuToggle.INACTIVE_CLASS);
+        if (this.options.blockBodyScroll)
+            this.disableBodyScroll();
     }
 
     /**
@@ -42,7 +49,9 @@ export default class MenuToggle {
             return;
         }
 
-        this.menu.classList.add(MenuToggle.INACTIVE_CLASS);
+        this.wrapper.classList.add(MenuToggle.INACTIVE_CLASS);
+        if (this.options.blockBodyScroll)
+            this.enableBodyScroll();
     }
 
     setMenu(menu) {
@@ -61,5 +70,33 @@ export default class MenuToggle {
         }
 
         this.hamburger = burger;
+    }
+
+    setWrapper(wrapper) {
+        if (!(wrapper instanceof HTMLElement)) {
+            wrapper = document.querySelector(wrapper) ||
+                throw new Error('Wrapper not found');
+        }
+
+        this.wrapper = wrapper;
+    }
+
+    enableBodyBlockFlag() {
+        this.options.blockBodyScroll = true;
+        return this;
+    }
+
+    /**
+     * @private
+     */
+    disableBodyScroll() {
+        document.body.style.overflow = 'hidden';
+    }
+
+    /**
+     * @private
+     */
+    enableBodyScroll() {
+        document.body.style.overflow = null;
     }
 }
