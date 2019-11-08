@@ -70,6 +70,7 @@ export default class LazyLoader {
      *
      * @param {HTMLElement} el
      * @static
+     * @deprecated
      */
     static showImage(el) {
         el.src = el.dataset.src;
@@ -86,7 +87,9 @@ export default class LazyLoader {
      */
     _CreateObserver() {
         if ('IntersectionObserver' in window) {
-            this.observer = new IntersectionObserver(this.observerCallback);
+            this.observer = new IntersectionObserver(this.observerCallback, {
+                rootMargin: '250px 0px'
+            });
         } else {
             this.observer = false;
         }
@@ -126,14 +129,21 @@ export class ImageElement {
 
     run() {
         this.image.onload = () => this.removeDataSrc();
-        this.loadSource();
+        this.downloadSource();
     }
 
     loadSource() {
         this.src = this.dataSrc;
     }
 
-    downloadSource() {}
+    downloadSource() {
+        const img = new Image();
+        img.addEventListener('load', ev => {
+            this.src = ev.target.src;
+        });
+
+        img.src = this.dataSrc;
+    }
 
     insertSource() {}
 
