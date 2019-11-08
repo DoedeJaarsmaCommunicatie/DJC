@@ -9,6 +9,7 @@ class AppServiceProvider
 		$providers = include get_stylesheet_directory() . '/src/config/app.php';
 		$this->providers = $providers['providers'];
 		$this->boot();
+		$this->register();
 	}
 	
 	public function boot(): void
@@ -21,8 +22,8 @@ class AppServiceProvider
 	public function register(): void
     {
         $this->addImageSize();
+//        $this->replacejQuery();
     }
-    
     
     private function addImageSize(): void
     {
@@ -33,5 +34,13 @@ class AppServiceProvider
                 'lazy-thumbnail' => __( 'Lazy thumbnail' ),
             ] );
         } );
+    }
+    
+    private function replaceJQuery() {
+        add_action('wp_enqueue_scripts', static function () {
+            wp_deregister_script('jquery');
+            wp_register_script('jquery', 'https://code.jquery.com/jquery-3.4.1.slim.min.js');
+            wp_enqueue_script('jquery');
+        }, 11);
     }
 }

@@ -1,3 +1,4 @@
+@use "abstracts/placeholders" as *;
 @use "variable" as *;
 
 .related-project-banner {
@@ -57,11 +58,7 @@
 }
 
 .related-project-image {
-  transition: all 225ms ease;
-  &[data-src] {
-    filter: blur(3px);
-    transition: all 225ms ease;
-  }
+  @extend %lazy-img;
 }
 
 .related-project-pills,

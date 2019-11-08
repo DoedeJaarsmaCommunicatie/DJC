@@ -1,0 +1,6 @@
+@use "abstracts/placeholders" as *;
+@use "variable" as *;
+
+.lazy-img {
+  @extend %lazy-img;
+}

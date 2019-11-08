@@ -1,0 +1,29 @@
+{% macro normal(img) %}
+    <img src="{{ img.src('large') }}"
+         alt="{{ img.alt }}"
+         title="{{ img.title }}"
+         srcset="{{ img.srcset }}">
+{% endmacro %}
+
+{% macro wrapped_normal(wrapper_class, img) %}
+    {% from _self import normal %}
+
+    <figure class="{{ wrapper_class }}">
+        {{ normal(img) }}
+    </figure>
+{% endmacro %}
+
+{% macro lazy(img) %}
+    <img src="{{ img.src('lazy-thumbnail') }}"
+         alt="{{ img.alt }}"
+         title="{{ img.title }}"
+         data-src="{{ img.src('large') }}"
+         data-srcset="{{ img.srcset }}" class="lazy-img" >
+{% endmacro %}
+
+{% macro wrapped_lazy(wrapper_class, img) %}
+    {% from _self import lazy %}
+    <figure class="{{ wrapper_class }}">
+        {{ lazy(img) }}
+    </figure>
+{% endmacro %}
