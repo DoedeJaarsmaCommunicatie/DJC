@@ -33,14 +33,27 @@ export default class TabReminder {
         this.title = this.pageTitle;
     }
 
+    /**
+     * @returns {string}
+     */
     get title() {
-        return document.head.querySelector('title').innerText;
+        const title = document.head.querySelector('title') ||
+            throw new Error('Title not found');
+
+        return title.innerText;
     }
 
+
+    /**
+     * @param {string} val
+     */
     set title(val) {
         document.head.querySelector('title').innerText = val;
     }
 
+    /**
+     * @param {string} val
+     */
     set reminder(val) {
         this.reminderText = val;
     }
