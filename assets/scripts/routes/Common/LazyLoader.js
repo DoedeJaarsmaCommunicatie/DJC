@@ -28,7 +28,8 @@ export default class LazyLoader {
         const images = this.findAllImages();
         if (!this.observer) {
             for ( let i = 0; i < images.length; i++ ) {
-                LazyLoader.showImage(images[i]);
+                new ImageElement(images[i])
+                    .run();
             }
             return;
         }
@@ -54,10 +55,10 @@ export default class LazyLoader {
      */
     observerCallback(entries, observer) {
         entries.forEach(entry => {
+            const Img = new ImageElement(entry.target);
             if (entry.isIntersecting) {
                 if (entry.intersectionRatio > 0) {
-                    // noinspection JSCheckFunctionSignatures
-                    LazyLoader.showImage(entry.target);
+                    Img.run();
                     observer.unobserve(entry.target);
                 }
             }
@@ -96,5 +97,59 @@ export default class LazyLoader {
      */
     get Observer() {
         return this.observer;
+    }
+}
+
+export class ImageElement {
+    static PLACEHOLDER = '//via.placeholder.com/1200x600';
+
+    image;
+
+    constructor(image) {
+        this.imageElement(image);
+    }
+
+    /**
+     * @param {string|HTMLElement}image
+     */
+    imageElement(image) {
+        if (!(image instanceof Element)) {
+            image = document.querySelector(image);
+        }
+
+        if (!image) {
+            throw new Error('Image not found');
+        }
+
+        this.image = image;
+    }
+
+    run() {
+        this.image.onload = () => this.removeDataSrc();
+        this.loadSource();
+    }
+
+    loadSource() {
+        this.src = this.dataSrc;
+    }
+
+    downloadSource() {}
+
+    insertSource() {}
+
+    removeDataSrc() {
+        this.image.removeAttribute('data-src');
+    }
+
+    get src () {
+        return this.image.src;
+    }
+
+    get dataSrc() {
+        return this.image.dataset.src;
+    }
+
+    set src(val) {
+        this.image.src = val;
     }
 }
