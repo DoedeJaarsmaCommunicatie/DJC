@@ -37,7 +37,9 @@ class MenuServiceProvider
      */
     public function boot(): void
     {
-        register_nav_menus($this->menus);
+        register_nav_menus(
+            apply_filters('djc/register/menus/filter', $this->menus)
+        );
         
         add_filter('timber/context', [ $this, 'registerContent' ]);
     }
@@ -52,7 +54,7 @@ class MenuServiceProvider
     public function registerContent($content)
     {
         foreach ($this->menus as $key => $name) {
-            $content[ \App\Helpers\Str::camel($key) ] = new Menu($key);
+            $content[\App\Helpers\Str::camel($key)] = new Menu($key);
         }
         return $content;
     }

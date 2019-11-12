@@ -2,6 +2,8 @@
 namespace App\Providers;
 
 use App\Controllers\Filters\ProjectFilters;
+use function add_filter;
+use function add_image_size;
 
 class AppServiceProvider
 {
@@ -25,16 +27,18 @@ class AppServiceProvider
     {
         $this->addImageSize();
         ProjectFilters::register();
-//        $this->replacejQuery();
+        if (apply_filters('djc/jquery/disable/filter', true)) {
+            $this->replacejQuery();
+        }
     }
     
     private function addImageSize(): void
     {
-        \add_image_size('lazy-thumbnail', 20, 20, false);
+        add_image_size('lazy-thumbnail', 20, 20, false);
         
-        \add_filter( 'image_size_names_choose', static function ( $sizes ) {
+        add_filter( 'image_size_names_choose', static function ( $sizes ) {
             return array_merge( $sizes, [
-                'lazy-thumbnail' => __( 'Lazy thumbnail' ),
+                'lazy-thumbnail' => __( 'Lazy thumbnail', 'djc' ),
             ] );
         } );
     }
