@@ -1,22 +1,22 @@
 {% from 'components/images.html.twig' import wrapped_lazy as image %}
 
 <header class="project-hero bg-gray py-16 px-2 lg:px-0">
-    {% do action('djc/project/header/content/before', post) %}
+    {% do action('djc/project/single/header/content/before', post) %}
     <div class="container mx-auto lg:flex">
         <div class="lg:w-1/3 lg:pr-4">
             <h1 class="post-title djc-title content">{{ post.title }}</h1>
             {% for opdrachtgever in opdrachtgevers %}
-                {% do action('djc/project/header/client/before') %}
+                {% do action('djc/project/single/header/client/before') %}
                 <small class="opdrachtgevers">
-                    {{ opdrachtgever|apply_filters('djc/project/header/client/filter', post.ID) }} {% if not loop.last %}<span class="opdrachtgevers-sep">|</span>{% endif %}
+                    {{ opdrachtgever|apply_filters('djc/project/single/header/client/filter', post) }} {% if not loop.last %}<span class="opdrachtgevers-sep">|</span>{% endif %}
                 </small>
-                {% do action('djc/project/header/client/after') %}
+                {% do action('djc/project/single/header/client/after') %}
             {% endfor %}
 
             <section class="project-pills pt-2">
                 {% for item in services %}
                     <a class="related-pill" href="{{ item.link }}" data-title="{{ item.title }}" data-id="{{ item.id }}" data-type="{{ item.post_type }}">
-                        {{ item.title }}
+                        {{ item.title|apply_filters('djc/project/single/header/services/filter', post) }}
                     </a>
                 {% endfor %}
             </section>
@@ -25,4 +25,5 @@
             {{ image(null, post.thumbnail, post) }}
         </div>
     </div>
+    {% do action('djc/project/single/header/content/before', post) %}
 </header>
