@@ -1,5 +1,7 @@
 {% extends 'layouts/app.twig' %}
 
 {% block content %}
+    {% do action('djc/page/content/before') %}
     {{ post.content }}
+    {% do action('djc/page/content/after') %}
 {% endblock %}

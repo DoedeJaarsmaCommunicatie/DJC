@@ -4,7 +4,7 @@ use Timber\Timber;
 include_once get_stylesheet_directory() . '/vendor/autoload.php';
 
 add_theme_support('custom-logo');
-add_theme_support( 'post-thumbnails' );
+add_theme_support('post-thumbnails');
 
 Timber::$locations = [
     get_stylesheet_directory() . '/templates/',
@@ -15,6 +15,9 @@ $checker = Puc_v4_Factory::buildUpdateChecker(
     __FILE__
 );
 
+/**
+ * @param \ElementorPro\Modules\ThemeBuilder\Classes\Locations_Manager $elementor_theme_manager
+ */
 function theme_prefix_register_elementor_locations( $elementor_theme_manager ) {
     
     $elementor_theme_manager->register_location(

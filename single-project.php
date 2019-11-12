@@ -1,9 +1,13 @@
 <?php
 
-$context = \Timber\Timber::get_context();
-$context['post'] = new \Timber\Post();
+use App\Helpers\Template;
+use Timber\Post;
+use Timber\Timber;
+
+$context                   = Timber::get_context();
+$context['post']           = new Post();
 $context['opdrachtgevers'] = [];
-$context['services'] = [];
+$context['services']       = [];
 
 if (function_exists('get_field')) {
     foreach (get_field('opdrachtgevers', $context['post']->ID)?? [] as $opdrachtgever) {
@@ -11,14 +15,17 @@ if (function_exists('get_field')) {
     }
     
     foreach (get_field( 'dienst', $context['post']->id)?? [] as $service) {
-        $context['services'] []= new \Timber\Post($service);
+        $context['services'] []= new Post($service);
     }
 }
 
-return \Timber\Timber::render(
-    [
-        'views/single/project.html.twig',
-        'views/page.html.twig',
-    ],
-    $context
-);
+$context = apply_filters('djc/project/single/context/filter', $context);
+
+$templates = [
+    Template::viewHtmlTwigFile('project'),
+    Template::viewHtmlTwigFile('page'),
+];
+
+$templates = apply_filters('djc/project/single/templates/filter', $templates);
+
+return Timber::render($templates, $context);
