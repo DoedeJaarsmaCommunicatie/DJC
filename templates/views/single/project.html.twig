@@ -1,7 +1,13 @@
 {% extends 'layouts/app.twig' %}
 
 {% block content %}
+    {% do action('djc/project/single/before') %}
     {{ include('partials/single/project/header.html.twig') }}
 
-    <main class="post-content content">{{ post.content }}</main>
+    <main class="{{ "post-content content"|apply_filters('djc/project/single/content/class/filter', post) }}">
+        {% do action('djc/project/single/content/before') %}
+        {{ post.content }}
+        {% do action('djc/project/single/content/after') %}
+    </main>
+    {% do action('djc/project/single/after') %}
 {% endblock %}
