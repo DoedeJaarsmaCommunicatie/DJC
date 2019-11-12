@@ -1,0 +1,7 @@
+{% extends 'layouts/app.twig' %}
+
+{% block content %}
+    {% if not fn('elementor_theme_do_location', '404-content') %}
+        {{ post.content }}
+    {% endif %}
+{% endblock %}

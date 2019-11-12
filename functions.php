@@ -29,6 +29,12 @@ function theme_prefix_register_elementor_locations( $elementor_theme_manager ) {
         ]
     );
     
-    $elementor_theme_manager->register_location( 'single' );
+    $elementor_theme_manager->register_location(
+        '404-content',
+        [
+            'label'     => __('404 Content', 'djc'),
+            'multiple'  => false,
+        ]
+    );
 }
 add_action( 'elementor/theme/register_locations', 'theme_prefix_register_elementor_locations' );

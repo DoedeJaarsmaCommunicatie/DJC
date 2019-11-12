@@ -22,7 +22,7 @@ if (function_exists('get_field')) {
 $context = apply_filters('djc/project/single/context/filter', $context);
 
 $templates = [
-    Template::viewHtmlTwigFile('project'),
+    Template::viewHtmlTwigFile('single/project'),
     Template::viewHtmlTwigFile('page'),
 ];
 
