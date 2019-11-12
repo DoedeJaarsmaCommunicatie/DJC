@@ -1,6 +1,13 @@
 {% set _logo = Image(theme.theme_mod('custom_logo')) %}
+
+{% set _url = site.link|apply_filters('djc/header/logo/link/filter') %}
+{% set _title = site.title|apply_filters('djc/header/logo/title/filter') %}
+{% set _src = _logo.src('large')|apply_filters('djc/header/logo/src/filter', _logo) %}
+{% set _alt = _logo.alt|apply_filters('djc/header/logo/alt/filter', _logo, site) %}
+{% set _class = "custom-logo"|apply_filters('djc/header/logo/class/filter') %}
+
 <figure class="custom-logo-wrapper">
-    <a href="{{ site.link }}" title="{{ site.title }}">
-        <img src="{{ _logo.src('large') }}" alt="{{ _logo.alt?? site.title }}" title="{{ _logo.title }}" class="custom-logo" />
+    <a href="{{ _url }}" title="{{ _title }}">
+        <img src="{{ _src }}" alt="{{ _alt }}" title="{{ _logo.title }}" class="{{ _class }}" />
     </a>
 </figure>

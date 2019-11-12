@@ -8,7 +8,9 @@
         {{ item.title }}
 
         {% if item.children %}
-            <i class="fas fa-chevron-down"></i>
+            {% if true|apply_filters('djc/menu-items/show-chevron/filter') %}
+                <i class="fas fa-chevron-down"></i>
+            {% endif %}
         {% endif %}
     </a>
 {% endmacro menu_item %}

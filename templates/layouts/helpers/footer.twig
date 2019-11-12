@@ -9,7 +9,7 @@
     </aside>
     <div class="lg:flex container mx-auto px-4 lg:px-0">
         <div class="lg:w-1/4 content">
-            <h2 class="footer-title">Adres</h2>
+            <h2 class="footer-title">{{ __('Adres', 'djc') }}</h2>
             <p>
                 {{ theme.theme_mod('address') }}
             </p>
@@ -43,15 +43,21 @@
             {% endfor %}
         </section>
         <section class="lg:ml-auto footer-social">
-            <a href="{{ theme.theme_mod('facebook-url')?? '#' }}" class="social-button" title="Bekijk Facebook pagina">
-                <i class="fab fa-facebook-f"></i>
+            {% if true|apply_filters('djc/footer/socials/facebook/show/filter') %}
+            <a href="{{ theme.theme_mod('facebook-url')?? '#' }}" class="social-button" title="{{ __('Bekijk Facebook pagina', 'djc') }}">
+                <i class="{{ "fab fa-facebook-f"|apply_filters('djc/footer/socials/facebook/icon/filter') }}"></i>
             </a>
-            <a href="{{ theme.theme_mod('linkedin-url')?? '#' }}" class="social-button" title="Bekijk LinkedIn pagina">
-                <i class="fab fa-linkedin-in"></i>
+            {% endif %}
+            {% if true|apply_filters('djc/footer/socials/linkedin/show/filter') %}
+            <a href="{{ theme.theme_mod('linkedin-url')?? '#' }}" class="social-button" title="{{ __('Bekijk LinkedIn pagina', 'djc') }}">
+                <i class="{{ "fab fa-linkedin-in"|apply_filters('djc/footer/socials/linkedin/icon/filter') }}"></i>
             </a>
-            <a href="{{ theme.theme_mod('instagram-url')?? '#' }}" class="social-button" title="Bekijk Instagram pagina">
-                <i class="fab fa-instagram"></i>
-            </a>
+            {% endif %}
+            {% if true|apply_filters('djc/footer/socials/instagram/show/filter') %}
+                <a href="{{ theme.theme_mod('instagram-url')?? '#' }}" class="social-button" title="{{ __('Bekijk Instagram pagina', 'djc') }}">
+                    <i class="{{ "fab fa-instagram"|apply_filters('djc/footer/socials/instagram/icon/filter') }}"></i>
+                </a>
+            {% endif %}
         </section>
     </div>
 </footer>
