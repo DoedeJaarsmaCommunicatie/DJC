@@ -1,6 +1,7 @@
 <?php
 namespace App\Providers;
 
+use App\Controllers\Filters\ElementorFilters;
 use App\Controllers\Filters\ProjectFilters;
 use function add_filter;
 use function add_image_size;
@@ -27,6 +28,7 @@ class AppServiceProvider
     {
         $this->addImageSize();
         ProjectFilters::register();
+        ElementorFilters::register();
         if (apply_filters('djc/jquery/disable/filter', true)) {
             $this->replacejQuery();
         }
