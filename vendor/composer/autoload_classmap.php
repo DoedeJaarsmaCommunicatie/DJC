@@ -10,6 +10,7 @@ return array(
     'App\\Controllers\\Customizer\\Customizer' => $baseDir . '/src/Controllers/Customizer/Customizer.php',
     'App\\Controllers\\Customizer\\General\\GeneralCustomizer' => $baseDir . '/src/Controllers/Customizer/General/GeneralCustomizer.php',
     'App\\Controllers\\Customizer\\General\\GeneralInfoController' => $baseDir . '/src/Controllers/Customizer/General/GeneralInfoController.php',
+    'App\\Controllers\\Filters\\ProjectFilters' => $baseDir . '/src/Controllers/Filters/ProjectFilters.php',
     'App\\Exceptions\\CookieNotSetException' => $baseDir . '/src/Exceptions/CookieNotSetException.php',
     'App\\Exceptions\\MultiSiteNotEnabledException' => $baseDir . '/src/Exceptions/MultiSiteNotEnabledException.php',
     'App\\Exceptions\\ProductNotFoundException' => $baseDir . '/src/Exceptions/ProductNotFoundException.php',

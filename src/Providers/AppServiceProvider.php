@@ -1,6 +1,8 @@
 <?php
 namespace App\Providers;
 
+use App\Controllers\Filters\ProjectFilters;
+
 class AppServiceProvider
 {
 	protected $providers;
@@ -22,6 +24,7 @@ class AppServiceProvider
 	public function register(): void
     {
         $this->addImageSize();
+        ProjectFilters::register();
 //        $this->replacejQuery();
     }
     

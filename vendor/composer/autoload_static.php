@@ -139,6 +139,7 @@ class ComposerStaticInitd478b73b9349bee22e9b4091ab0df69b
         'App\\Controllers\\Customizer\\Customizer' => __DIR__ . '/../..' . '/src/Controllers/Customizer/Customizer.php',
         'App\\Controllers\\Customizer\\General\\GeneralCustomizer' => __DIR__ . '/../..' . '/src/Controllers/Customizer/General/GeneralCustomizer.php',
         'App\\Controllers\\Customizer\\General\\GeneralInfoController' => __DIR__ . '/../..' . '/src/Controllers/Customizer/General/GeneralInfoController.php',
+        'App\\Controllers\\Filters\\ProjectFilters' => __DIR__ . '/../..' . '/src/Controllers/Filters/ProjectFilters.php',
         'App\\Exceptions\\CookieNotSetException' => __DIR__ . '/../..' . '/src/Exceptions/CookieNotSetException.php',
         'App\\Exceptions\\MultiSiteNotEnabledException' => __DIR__ . '/../..' . '/src/Exceptions/MultiSiteNotEnabledException.php',
         'App\\Exceptions\\ProductNotFoundException' => __DIR__ . '/../..' . '/src/Exceptions/ProductNotFoundException.php',

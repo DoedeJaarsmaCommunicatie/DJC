@@ -1,29 +1,40 @@
-{% macro normal(img) %}
-    <img src="{{ img.src('large') }}"
-         alt="{{ img.alt }}"
-         title="{{ img.title }}"
-         srcset="{{ img.srcset }}">
+{% macro normal(img, post) %}
+    {% set _src = img.src('large')|apply_filters('djc/image/normal/src/filter', post, img) %}
+    {% set _alt = img.alt|apply_filters('djc/image/normal/alt/filter', post, img) %}
+    {% set _title = img.title|apply_filters('djc/image/normal/title/filter', post, img) %}
+    {% set _srcset = img.srcset|apply_filters('djc/image/normal/srcset/filter', post, img) %}
+
+    <img src="{{ _src }}"
+         alt="{{ _alt }}"
+         title="{{ _title }}"
+         srcset="{{ _srcset }}">
 {% endmacro %}
 
-{% macro wrapped_normal(wrapper_class, img) %}
+{% macro wrapped_normal(wrapper_class, img, post) %}
     {% from _self import normal %}
 
     <figure class="{{ wrapper_class }}">
-        {{ normal(img) }}
+        {{ normal(img, post) }}
     </figure>
 {% endmacro %}
 
-{% macro lazy(img) %}
+{% macro lazy(img, post) %}
+    {% set _lazySrc = img.src('lazy-thumbnail')|apply_filters('djc/image/lazy/src/lazy/filter', post, img) %}
+    {% set _src = img.src('large')|apply_filters('djc/image/lazy/src/filter', post, img) %}
+    {% set _alt = img.alt|apply_filters('djc/image/lazy/alt/filter', post, img) %}
+    {% set _title = img.title|apply_filters('djc/image/lazy/title/filter', post, img) %}
+    {% set _srcset = img.srcset|apply_filters('djc/image/lazy/srcset/filter', post, img) %}
+
     <img src="{{ img.src('lazy-thumbnail') }}"
-         alt="{{ img.alt }}"
-         title="{{ img.title }}"
-         data-src="{{ img.src('large') }}"
-         data-srcset="{{ img.srcset }}" class="lazy-img" >
+         alt="{{ _alt }}"
+         title="{{ _title }}"
+         data-src="{{ _src }}"
+         data-srcset="{{ _srcset }}" class="lazy-img" >
 {% endmacro %}
 
-{% macro wrapped_lazy(wrapper_class, img) %}
+{% macro wrapped_lazy(wrapper_class, img, post) %}
     {% from _self import lazy %}
     <figure class="{{ wrapper_class }}">
-        {{ lazy(img) }}
+        {{ lazy(img, post) }}
     </figure>
 {% endmacro %}
