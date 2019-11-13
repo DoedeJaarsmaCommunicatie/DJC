@@ -29,7 +29,7 @@ class AppServiceProvider
         $this->addImageSize();
         ProjectFilters::register();
         ElementorFilters::register();
-        if (apply_filters('djc/jquery/disable/filter', true)) {
+        if (apply_filters('djc/jquery/disable/filter', false)) {
             $this->replacejQuery();
         }
     }
