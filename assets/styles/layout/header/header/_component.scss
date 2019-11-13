@@ -5,6 +5,9 @@
   top: 0;
   z-index: 20;
   background: white;
+
+  transition: all 335ms ease-in-out;
+
   .admin-bar & {
     top: 32px;
   }
