@@ -7,6 +7,7 @@ export default {
         // Javascript that fires on all pages. after page specific JS is fires.
         menuToggleBelowTablet();
         LazyLoader();
+        headerShader();
     }
 }
 
@@ -37,4 +38,13 @@ const LazyLoader = async () => {
     const Loader = new I('[data-src]');
 
     Loader.run();
+}
+
+const headerShader = async () => {
+    const i = async () =>
+        (await import(/* webpackChunkName: "dist/scripts/common/header-float" */ './Common/FloatingHeader')).default;
+
+    const I = await i();
+    const shader = new I();
+    shader.init();
 }
