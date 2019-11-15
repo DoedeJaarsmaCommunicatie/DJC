@@ -13,7 +13,7 @@
 
 .menu-wrapper {
   > .menu-item.has-children {
-    margin-right: 2rem;
+    margin-right: 2.5rem;
     &::after {
       background-image: url($menu-icon);
       content: ' ';
@@ -24,7 +24,7 @@
       background-size: contain;
       background-repeat: no-repeat;
       position: absolute;
-      right: .3rem;
+      right: 1rem;
       top: 0.3rem;
     }
   }
