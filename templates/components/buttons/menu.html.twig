@@ -1,13 +1,13 @@
 {% macro menu_item(item, class) %}
     <a href="{{ item.link }}"
-       class="{{ class }} {{ item.classes|join(' ') }}"
+       class="{{ class }} {{ item.classes|join(' ') }} {{ item.children? 'has-children': '' }}"
        title="{{ item.title }}"
        target="{{ item.target }}"
        aria-label="{{ item.title }}"
     >
         {{ item.title }}
 
-        {% if item.children %}
+        {% if false %}
             {% if true|apply_filters('djc/menu-items/show-chevron/filter') %}
                 <i class="fas fa-chevron-down"></i>
             {% endif %}
